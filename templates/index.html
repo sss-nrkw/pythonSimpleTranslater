@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>翻訳アプリ</title>
+</head>
+<body>
+    <h1>翻訳アプリ</h1>
+    <form method="POST">
+        <label for="from_lang">翻訳する言語</label>
+        <input type="text" name="from_lang" id="from_lang" placeholder="e.g., ja"><br>
+
+        <label for="to_lang">翻訳結果の言語</label>
+        <input type="text" name="to_lang" id="to_lang" placeholder="e.g., en"><br>
+
+        <label for="text_to_translate">翻訳する文字列</label>
+        <input type="text" name="text_to_translate" id="text_to_translate" placeholder="Enter text to translate"><br>
+
+        <input type="submit" value="Translate">
+    </form>
+
+    {% if result %}
+    <h2>Translation:</h2>
+    <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
